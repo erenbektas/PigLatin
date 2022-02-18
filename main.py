@@ -1,3 +1,5 @@
 from Encoder import pigger
 
-pigger()
+while True:
+    word = input("Word please: ")
+    pigger(word)
