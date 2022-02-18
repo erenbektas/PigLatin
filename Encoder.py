@@ -2,9 +2,12 @@ vowels = ("a", "e", "i", "o", "u", "A", "E", "I", "O", "U")
 
 def pigger(x):
         if x[0] in vowels:
-            print(x + "yay")
+            return x + "yay"
         else:
-            if x[1] in vowels:
-                print(x[1:] + x[0] + "ay")
+            if len(x) > 1:
+                if x[1] in vowels:
+                    return x[1:] + x[0] + "ay"
+                else:
+                    return x[2:] + x[0:2] + "ay"
             else:
-                print(x[2:] + x[0:2] + "ay")
+                return x + "ay"
