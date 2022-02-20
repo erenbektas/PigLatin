@@ -1,5 +1,5 @@
 import string
-vowels = ("a", "e", "i", "o", "u", "A", "E", "I", "O", "U")
+vowels = "a", "e", "i", "o", "u", "A", "E", "I", "O", "U"
 
 def pigger(x):
     newsent = []     #list of piglatin words
@@ -18,8 +18,12 @@ def pigger(x):
                 newword = n[2:] + n[0:2] + "ay"
                 newsent.append(newword)
         else:
-            newword = n + "ay"
-            newsent.append(newword)
+            if n[0] not in vowels:
+                newword = n + "ay"
+                newsent.append(newword)
+            else:
+                newword = n + "yay"
+                newsent.append(newword)
     if x[0][0] in string.ascii_uppercase:
         first = newsent[0] + " "
         final = " ".join(newsent[1:])
