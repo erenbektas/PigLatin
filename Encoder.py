@@ -42,5 +42,4 @@ def pigger(x):
             newsent[pos_n] = newsent[pos_n].capitalize() #first letter of the corresponding element will also start with an uppercase
 
     final = " ".join(newsent)
-    print(newsent)
     return final
